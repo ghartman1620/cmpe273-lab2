@@ -9,11 +9,6 @@ classes_by_id = {}
 next_student_id = 0
 next_class_id = 0
 
-@app.route('/')
-def hello():
-    name = request.args.get("name", "World")
-    return f'Bonjour, {escape(name)}!'
-
 @app.route('/students', methods=['POST', 'GET'])
 def students():
     global students_by_id, next_student_id
